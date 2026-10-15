@@ -5,116 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>김강 Tyrion Kim</title>
 <meta name="description" content="휠체어 사용자를 위한 운동 솔루션 휠리엑스를 만드는 캥스터즈 창업자 김강(Tyrion Kim)의 개인 페이지">
+<meta property="og:title" content="김강 Tyrion Kim — Founder & CEO, Kangsters">
+<meta property="og:description" content="휠체어 위에서도, 숨이 턱 끝까지 차오르는 운동을.">
+<meta property="og:image" content="img-portrait.jpg">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-  :root{
-    --ink:#1A1718; --red:#C02026; --sub:#6B6B6B; --line:#E5E5E5; --tint:#FBEAEA; --bg:#FFFFFF; --soft:#F7F6F5;
-  }
+  :root{--ink:#1A1718;--red:#C02026;--sub:#6B6B6B;--line:#E5E5E5;--tint:#FBEAEA;--bg:#FFFFFF;--soft:#F7F6F5;--body:#3b3738}
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;font-size:17px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
   a{color:inherit}
-  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  img{display:block;max-width:100%;height:auto}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+  .narrow{max-width:720px}
 
-  /* top bar */
-  header.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+  header.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
   header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-  .name-mark{font-weight:700;font-size:15px;letter-spacing:-.01em;text-decoration:none}
+  .name-mark{font-weight:700;font-size:15px;text-decoration:none}
   .name-mark span{color:var(--sub);font-weight:400;margin-left:6px}
   nav a{font-size:14px;color:var(--sub);text-decoration:none;margin-left:18px}
   nav a:hover{color:var(--ink)}
-  @media (max-width:560px){nav a:not(.keep){display:none}}
+  @media (max-width:600px){nav a:not(.keep){display:none}}
 
   /* hero */
-  .hero{padding:72px 0 56px}
+  .hero{display:grid;grid-template-columns:1.25fr .85fr;gap:48px;align-items:end;padding:64px 0 0}
   .eyebrow{font-size:14px;color:var(--sub);letter-spacing:.02em;margin:0 0 20px}
   .eyebrow b{color:var(--ink);font-weight:600}
-  .hero h1{font-size:clamp(34px,7vw,58px);line-height:1.22;letter-spacing:-.035em;font-weight:800;margin:0 0 28px}
+  .hero h1{font-size:clamp(34px,5.6vw,56px);line-height:1.22;letter-spacing:-.035em;font-weight:800;margin:0 0 26px}
   .hero h1 em{font-style:normal;color:var(--red)}
-  .hero p.lead{font-size:clamp(17px,2.4vw,19px);color:#3b3738;max-width:620px;margin:0}
-  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--red);margin-right:10px;vertical-align:middle;transform:translateY(-2px)}
+  .lead{font-size:clamp(17px,2vw,19px);color:var(--body);margin:0}
+  .portrait{position:relative;margin:0}
+  .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;background:var(--soft)}
+  .portrait figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-size:12px;letter-spacing:.06em;padding:6px 10px}
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;gap:28px;padding-top:40px}
+    .portrait{order:-1;max-width:300px}
+  }
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);margin-top:56px}
-  .stat{padding:18px 14px 4px 0}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);margin-top:48px}
+  .stat{padding:18px 14px 6px 0}
   .stat + .stat{padding-left:14px;border-left:1px solid var(--line)}
-  .stat strong{display:block;font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.2}
+  .stat strong{display:block;font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.2}
   .stat span{font-size:13px;color:var(--sub);line-height:1.5;display:block;margin-top:4px}
-  @media (max-width:560px){
+  @media (max-width:600px){
     .stats{grid-template-columns:1fr 1fr}
     .stat:nth-child(3){padding-left:0;border-left:0}
     .stat:nth-child(n+3){border-top:1px solid var(--line);margin-top:10px}
   }
 
-  /* sections */
-  section{padding:64px 0;border-top:1px solid var(--line)}
-  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+  section{padding:72px 0;border-top:1px solid var(--line);margin-top:56px}
+  section + section{margin-top:0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:32px}
   .sec-num{font-size:13px;font-weight:700;color:var(--red);letter-spacing:.06em}
-  .sec-head h2{font-size:clamp(24px,4vw,30px);letter-spacing:-.03em;margin:0;font-weight:800}
-  .intro{font-size:clamp(18px,2.6vw,21px);line-height:1.7;font-weight:500;letter-spacing:-.01em;margin:0 0 44px}
+  .sec-head h2{font-size:clamp(24px,3.6vw,30px);letter-spacing:-.03em;margin:0;font-weight:800}
+  .intro{font-size:clamp(19px,2.6vw,23px);line-height:1.65;font-weight:600;letter-spacing:-.015em;margin:0 0 36px;max-width:720px}
   .intro mark{background:linear-gradient(transparent 62%,var(--tint) 62%);color:inherit;padding:0 2px}
 
+  figure.wide{margin:0 0 44px}
+  figure.wide img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  figcaption.cap{font-size:13px;color:var(--sub);margin-top:10px}
+
   /* timeline */
-  .tl{list-style:none;margin:0;padding:0}
-  .tl li{display:grid;grid-template-columns:104px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+  .tl{list-style:none;margin:0;padding:0;max-width:760px}
+  .tl li{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
   .tl li:first-child{border-top:0;padding-top:0}
   .tl .when{font-size:14px;font-weight:700;color:var(--sub);font-variant-numeric:tabular-nums;padding-top:3px}
   .tl h3{font-size:18px;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
-  .tl p{margin:0;color:#3b3738;font-size:16px}
+  .tl p{margin:0;color:var(--body);font-size:16px}
   .tl li.key .when{color:var(--red)}
   .tl li.key h3::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:8px;vertical-align:middle;transform:translateY(-2px)}
-  @media (max-width:560px){.tl li{grid-template-columns:1fr;gap:4px}}
+  .tl .ph{margin-top:14px}
+  .tl .ph img{width:100%;max-width:520px;aspect-ratio:3/2;object-fit:cover}
+  .tl .ph.tall img{max-width:300px;aspect-ratio:4/5}
+  .tl .ph small{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+  @media (max-width:600px){.tl li{grid-template-columns:1fr;gap:4px}}
 
-  /* quote */
-  .quote{margin:8px 0 0;padding:28px 28px 26px;background:var(--soft);border-left:3px solid var(--red)}
-  .quote p{font-size:clamp(19px,3vw,23px);line-height:1.6;font-weight:700;letter-spacing:-.02em;margin:0 0 12px}
+  .quote{margin:44px 0 0;padding:28px 28px 26px;background:var(--soft);border-left:3px solid var(--red);max-width:760px}
+  .quote p{font-size:clamp(19px,2.8vw,23px);line-height:1.6;font-weight:700;letter-spacing:-.02em;margin:0 0 12px}
   .quote cite{font-style:normal;font-size:13px;color:var(--sub)}
 
   /* work */
-  .product{border:1px solid var(--line);padding:28px}
-  .product .tag{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase}
-  .product h3{font-size:24px;margin:6px 0 10px;letter-spacing:-.03em}
-  .product p{margin:0 0 18px;color:#3b3738;font-size:16px}
-  .formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px;font-weight:600;margin:0 0 18px}
-  .formula span.b{border:1px solid var(--ink);padding:4px 10px}
-  .formula span.op{color:var(--sub);font-weight:400}
-  .formula span.res{background:var(--ink);color:#fff;padding:5px 11px}
-  .facts{list-style:none;margin:0;padding:0;font-size:15px;color:#3b3738}
+  .product{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line)}
+  .product .pimg img{width:100%;height:100%;object-fit:cover;min-height:280px}
+  .product .pbody{padding:28px}
+  .tag{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase}
+  .product h3{font-size:23px;margin:6px 0 10px;letter-spacing:-.03em;line-height:1.4}
+  .product p{margin:0 0 18px;color:var(--body);font-size:16px}
+  .formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;font-weight:600;margin:0 0 18px}
+  .formula .b{border:1px solid var(--ink);padding:4px 10px}
+  .formula .op{color:var(--sub);font-weight:400}
+  .formula .res{background:var(--ink);color:#fff;padding:5px 11px}
+  .facts{list-style:none;margin:0;padding:0;font-size:15px;color:var(--body)}
   .facts li{padding:8px 0;border-top:1px dashed var(--line)}
+  @media (max-width:760px){.product{grid-template-columns:1fr}.product .pimg img{aspect-ratio:3/2;min-height:0}}
 
-  .awards{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border-top:2px solid var(--ink)}
-  .award{padding:18px 16px 18px 0;border-bottom:1px solid var(--line)}
-  .award:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
-  .award b{display:block;font-size:16px;letter-spacing:-.01em}
-  .award span{font-size:13px;color:var(--sub)}
-  @media (max-width:560px){.awards{grid-template-columns:1fr}.award:nth-child(even){padding-left:0;border-left:0}}
+  .video{margin:36px 0 0}
+  .video .frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  .awards-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;margin-top:44px;align-items:start}
+  .awards-wrap figure{margin:0}
+  .awards-wrap figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .awards{border-top:2px solid var(--ink)}
+  .award{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .award b{font-size:16px;letter-spacing:-.01em}
+  .award span{font-size:13px;color:var(--sub);text-align:right}
+  @media (max-width:760px){.awards-wrap{grid-template-columns:1fr}.awards-wrap figure{max-width:340px}}
 
   /* now */
   .now{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .card{border:1px solid var(--line);padding:22px}
-  .card.wide{grid-column:1 / -1;background:var(--ink);color:#fff;border-color:var(--ink)}
+  .card.wide{grid-column:1 / -1;background:var(--ink);color:#fff;border-color:var(--ink);padding:0;display:grid;grid-template-columns:1.1fr 1fr}
+  .card.wide .cimg img{width:100%;height:100%;object-fit:cover;min-height:260px}
+  .card.wide .cbody{padding:26px}
   .card.wide p{color:#d9d6d6}
   .card.wide .k{color:#ff8a8f}
   .card .k{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase;margin:0 0 6px}
   .card h3{font-size:18px;margin:0 0 8px;letter-spacing:-.02em}
-  .card p{margin:0;font-size:15px;color:#3b3738;line-height:1.7}
-  .card ul{margin:0;padding:0;list-style:none;font-size:15px;color:#3b3738}
-  .card ul li{padding:5px 0;border-top:1px dashed var(--line)}
+  .card p{margin:0;font-size:15px;color:var(--body);line-height:1.7}
+  .card ul{margin:0;padding:0;list-style:none;font-size:15px;color:var(--body)}
+  .card ul li{padding:6px 0;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px}
   .card ul li:first-child{border-top:0}
-  .card ul li small{color:var(--sub);font-size:13px}
+  .card ul li small{color:var(--sub);font-size:13px;white-space:nowrap}
   .card a.arrow{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--red);text-decoration:none}
-  @media (max-width:560px){.now{grid-template-columns:1fr}}
+  .gallery{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .gallery figure{margin:0}
+  .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  @media (max-width:760px){
+    .now{grid-template-columns:1fr}
+    .card.wide{grid-template-columns:1fr}
+    .card.wide .cimg img{aspect-ratio:3/2;min-height:0}
+  }
 
-  /* press */
+  /* videos */
+  .vids{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .vid{text-decoration:none;display:block}
+  .vid .th{position:relative;aspect-ratio:16/9;background:#111;overflow:hidden}
+  .vid .th img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+  .vid:hover .th img{transform:scale(1.03)}
+  .vid .play{position:absolute;left:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+  .vid .play::after{content:"";border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+  .vid b{display:block;font-size:15px;margin-top:10px;line-height:1.5;letter-spacing:-.01em}
+  .vid span{font-size:13px;color:var(--sub)}
+  @media (max-width:760px){.vids{grid-template-columns:1fr}}
+
   .press{list-style:none;margin:0;padding:0}
   .press li a{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-top:1px solid var(--line);text-decoration:none}
   .press li:last-child a{border-bottom:1px solid var(--line)}
   .press .t{font-weight:600;font-size:16px;letter-spacing:-.01em}
   .press .m{font-size:13px;color:var(--sub);white-space:nowrap}
   .press li a:hover .t{color:var(--red)}
+  @media (max-width:600px){.press li a{grid-template-columns:1fr;gap:2px}}
 
-  /* footer */
   footer{padding:56px 0 64px;border-top:2px solid var(--ink)}
-  .motto{font-size:clamp(20px,3.4vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1.4;margin:0 0 6px}
+  .motto{font-size:clamp(20px,3.2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1.4;margin:0 0 6px}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--red);margin-right:10px;vertical-align:middle;transform:translateY(-2px)}
   .motto-ko{color:var(--sub);margin:0 0 32px;font-size:15px}
   .links{display:flex;flex-wrap:wrap;gap:10px}
   .links a{border:1px solid var(--ink);padding:9px 16px;font-size:14px;font-weight:600;text-decoration:none}
@@ -127,29 +172,40 @@
 <header class="top">
   <div class="wrap">
     <a class="name-mark" href="#">김강<span>Tyrion Kim</span></a>
-    <nav><a href="#story">Story</a><a href="#work">Work</a><a href="#now">Now</a><a class="keep" href="#contact">Contact</a></nav>
+    <nav><a href="#story">Story</a><a href="#work">Work</a><a href="#now">Now</a><a href="#videos">Videos</a><a class="keep" href="#contact">Contact</a></nav>
   </div>
 </header>
 
 <main class="wrap">
 
   <div class="hero">
-    <p class="eyebrow"><b>Founder &amp; CEO, Kangsters</b> · KAIST Impact MBA</p>
-    <h1>휠체어 위에서도,<br><em>숨이 턱 끝까지</em> 차오르는<br>운동을.</h1>
-    <p class="lead">안녕하세요, 김강(Tyrion Kim)입니다. 휠체어 사용자를 위한 운동 솔루션 <b>휠리엑스</b>를 만드는 캥스터즈를 2020년에 창업했고, 휠체어 위에서 시작하는 스포츠 <b>‘피지컬 e스포츠’</b>를 키우고 있습니다.</p>
-
-    <div class="stats">
-      <div class="stat"><strong>2020</strong><span>캥스터즈 창업</span></div>
-      <div class="stat"><strong>20여 개국</strong><span>휠리엑스 수출</span></div>
-      <div class="stat"><strong>300+</strong><span>대회로 발굴한<br>장애인 e스포츠 선수</span></div>
-      <div class="stat"><strong>TIME</strong><span>2024 최고의 발명품</span></div>
+    <div>
+      <p class="eyebrow"><b>Founder &amp; CEO, Kangsters</b> · KAIST Impact MBA</p>
+      <h1>휠체어 위에서도,<br><em>숨이 턱 끝까지</em><br>차오르는 운동을.</h1>
+      <p class="lead">안녕하세요, 김강(Tyrion Kim)입니다. 휠체어 사용자를 위한 운동 솔루션 <b>휠리엑스</b>를 만드는 캥스터즈를 2020년에 창업했고, 휠체어 위에서 시작하는 스포츠 <b>‘피지컬 e스포츠’</b>를 키우고 있습니다.</p>
     </div>
+    <figure class="portrait">
+      <img src="img-portrait.jpg" alt="김강 대표 프로필 사진" width="900" height="1125">
+      <figcaption>TYRION KIM</figcaption>
+    </figure>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>2020</strong><span>캥스터즈 창업</span></div>
+    <div class="stat"><strong>20여 개국</strong><span>휠리엑스 수출</span></div>
+    <div class="stat"><strong>300+</strong><span>대회로 발굴한<br>장애인 e스포츠 선수</span></div>
+    <div class="stat"><strong>TIME</strong><span>2024 최고의 발명품</span></div>
   </div>
 
   <section id="story">
     <div class="sec-head"><span class="sec-num">01</span><h2>나의 이야기</h2></div>
 
     <p class="intro">긴 재활을 지나며 알게 된 것이 있습니다.<br>운동을 할 수 있느냐는 <mark>의지가 아니라 환경과 도구의 문제</mark>라는 것.</p>
+
+    <figure class="wide">
+      <img src="img-office-wheelyx.jpg" alt="사무실에서 휠리엑스 위에 앉아 웃고 있는 모습" width="1125" height="750" loading="lazy">
+      <figcaption class="cap">휠리엑스 위에서. 우리가 만든 것을 우리가 먼저 탑니다.</figcaption>
+    </figure>
 
     <ol class="tl">
       <li>
@@ -180,7 +236,8 @@
       <li class="key">
         <div class="when">2020</div>
         <div><h3>캥스터즈 창업</h3>
-        <p>똑같이 휠체어를 타는 부모님을 둔 조정흠(John Cho)과 함께 캥스터즈를 세웠습니다. 사랑하는 가족이 장벽 없이, 스스로 살아가는 삶을 누리게 하자는 것이 출발점이었습니다.</p></div>
+        <p>똑같이 휠체어를 타는 부모님을 둔 조정흠(John Cho)과 함께 캥스터즈를 세웠습니다. 사랑하는 가족이 장벽 없이, 스스로 살아가는 삶을 누리게 하자는 것이 출발점이었습니다.</p>
+        <div class="ph"><img src="img-window.jpg" alt="창가에 앉아 생각에 잠긴 모습" width="1125" height="750" loading="lazy"></div></div>
       </li>
       <li>
         <div class="when">2021</div>
@@ -192,10 +249,10 @@
         <div><h3>휠리엑스 출시</h3>
         <p>휠체어를 탄 채 혼자 올라가 달릴 수 있는 트레드밀. 목업만 7번 넘게 다시 만들었습니다.</p></div>
       </li>
-      <li>
-        <div class="when">2024</div>
+      <li class="key">
+        <div class="when">2023–24</div>
         <div><h3>세계가 알아보다, 그리고 다시 배우다</h3>
-        <p>TIME ‘올해의 발명품’, CES 혁신상, 파리 패럴림픽 전시. 같은 해 KAIST 임팩트 MBA에서 다시 공부를 시작했습니다.</p></div>
+        <p>에디슨 어워드 금상, CES 혁신상, TIME ‘올해의 발명품’, 파리 패럴림픽 전시. 2024년에는 KAIST 임팩트 MBA에서 다시 공부를 시작했습니다.</p></div>
       </li>
     </ol>
 
@@ -209,24 +266,34 @@
     <div class="sec-head"><span class="sec-num">02</span><h2>내가 만드는 것</h2></div>
 
     <div class="product">
-      <div class="tag">Wheely-X · 휠리엑스</div>
-      <h3>재활이 아니라, 게임이자 스포츠로</h3>
-      <p>휠체어 사용자가 실내에서 30분 이상 유산소 운동을 할 수 있는 전용 트레드밀입니다. 센서·앱·게임을 연결해, 운동을 ‘해야 하는 것’에서 ‘하고 싶은 것’으로 바꿉니다.</p>
-      <div class="formula">
-        <span class="b">휠체어 트레드밀</span><span class="op">+</span><span class="b">게임 앱 · XR</span><span class="op">=</span><span class="res">피지컬 e스포츠</span>
+      <div class="pimg"><img src="img-play-duo.jpg" alt="두 명의 휠체어 사용자가 휠리엑스 플레이로 레이싱 게임을 하는 모습" width="1800" height="1201" loading="lazy"></div>
+      <div class="pbody">
+        <div class="tag">Wheely-X · 휠리엑스</div>
+        <h3>재활이 아니라,<br>게임이자 스포츠로</h3>
+        <p>휠체어 사용자가 실내에서 30분 이상 유산소 운동을 할 수 있는 전용 트레드밀입니다. 센서·앱·게임을 연결해, 운동을 ‘해야 하는 것’에서 ‘하고 싶은 것’으로 바꿉니다.</p>
+        <div class="formula"><span class="b">휠체어 트레드밀</span><span class="op">+</span><span class="b">게임 · XR</span><span class="op">=</span><span class="res">피지컬 e스포츠</span></div>
+        <ul class="facts">
+          <li>휠체어레이싱 — 대한장애인e스포츠연맹 정식 종목(XR 부문)</li>
+          <li>버지니아공대·마운트 시나이 병원 등 연구기관 도입</li>
+          <li>개인·복지관·병원·체육센터, 20여 개국 공급</li>
+        </ul>
       </div>
-      <ul class="facts">
-        <li>휠체어레이싱 게임 — 대한장애인e스포츠연맹 정식 종목(XR 부문)</li>
-        <li>버지니아공대·캘리포니아주립대·마운트 시나이 병원 등 연구기관 도입</li>
-        <li>개인·복지관·병원·장애인체육센터, 20여 개국에 공급</li>
-      </ul>
     </div>
 
-    <div class="awards">
-      <div class="award"><b>TIME Best Inventions 2024</b><span>Accessibility 부문</span></div>
-      <div class="award"><b>CES 2024 Innovation Award</b><span>혁신상</span></div>
-      <div class="award"><b>Edison Awards 2023</b><span>수상</span></div>
-      <div class="award"><b>Paris 2024 Paralympics</b><span>현장 전시</span></div>
+    <div class="video">
+      <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/oRCBLklp_Tk" title="캥스터즈 기업 및 휠리엑스 소개 영상" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <figcaption class="cap">캥스터즈 기업 및 휠리엑스 소개 영상</figcaption>
+    </div>
+
+    <div class="awards-wrap">
+      <figure><img src="img-edison.jpg" alt="2023 에디슨 어워드 시상식 무대" width="1200" height="1500" loading="lazy"><figcaption class="cap">2023 에디슨 어워드 시상식</figcaption></figure>
+      <div class="awards">
+        <div class="award"><b>TIME Best Inventions 2024</b><span>Accessibility</span></div>
+        <div class="award"><b>CES 2024 Innovation Award</b><span>Accessibility &amp; AgeTech</span></div>
+        <div class="award"><b>Edison Awards 2023 · Gold</b><span>Customer-Centered Design</span></div>
+        <div class="award"><b>Paris 2024 Paralympics</b><span>현장 전시</span></div>
+        <div class="award"><b>대한장애인e스포츠연맹</b><span>휠체어레이싱 정식 종목</span></div>
+      </div>
     </div>
   </section>
 
@@ -235,9 +302,16 @@
 
     <div class="now">
       <div class="card wide">
-        <p class="k">Next · 2028 LA</p>
-        <h3>피지컬 e스포츠를 패럴림픽으로</h3>
-        <p>3년째 장애인 e스포츠 대회를 열며 선수 300명 이상을 만났습니다. 다음 목표는 장비·게임·경기 규정·선수 훈련을 하나의 표준으로 묶어, 2028 LA 패럴림픽을 향해 가는 것입니다. 일회성 행사가 아니라, 누구나 함께할 수 있는 스포츠이자 문화로.</p>
+        <div class="cimg"><img src="img-event-wide.jpg" alt="몰입형 스크린 앞에서 휠체어 레이싱 경기를 하는 선수들" width="1800" height="1200" loading="lazy"></div>
+        <div class="cbody">
+          <p class="k">Next · 2028 LA</p>
+          <h3>피지컬 e스포츠를 패럴림픽으로</h3>
+          <p>3년째 장애인 e스포츠 대회를 열며 선수 300명 이상을 만났습니다. 다음 목표는 장비·게임·경기 규정·선수 훈련을 하나의 표준으로 묶어 2028 LA 패럴림픽으로 가는 것. 일회성 행사가 아니라, 누구나 함께할 수 있는 스포츠이자 문화로.</p>
+        </div>
+      </div>
+      <div class="gallery">
+        <figure><img src="img-event-play.jpg" alt="경기에 몰입한 휠체어 선수" width="1200" height="1500" loading="lazy"></figure>
+        <figure><img src="img-event-moment.jpg" alt="경기를 마치고 함께 웃는 선수와 가족" width="1200" height="1500" loading="lazy"></figure>
       </div>
       <div class="card">
         <p class="k">Fellowships</p>
@@ -258,14 +332,32 @@
     </div>
   </section>
 
+  <section id="videos">
+    <div class="sec-head"><span class="sec-num">04</span><h2>영상으로 보기</h2></div>
+    <div class="vids">
+      <a class="vid" href="https://www.youtube.com/watch?v=kA1q7rYxBIs" target="_blank" rel="noopener">
+        <div class="th"><img src="https://i.ytimg.com/vi/kA1q7rYxBIs/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
+        <b>휠체어 사용자를 위한 종합 홈피트니스 솔루션, 휠리엑스</b><span>Kangsters</span>
+      </a>
+      <a class="vid" href="https://www.youtube.com/watch?v=duqY35_pCG4" target="_blank" rel="noopener">
+        <div class="th"><img src="https://i.ytimg.com/vi/duqY35_pCG4/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
+        <b>타임스퀘어에서 휠리엑스를? 노스페이스 에디션 10주년 행사</b><span>Kangsters</span>
+      </a>
+      <a class="vid" href="https://www.youtube.com/watch?v=PgaCE-hNaD8" target="_blank" rel="noopener">
+        <div class="th"><img src="https://i.ytimg.com/vi/PgaCE-hNaD8/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
+        <b>휠체어 사용자 6주간 홈트레이닝 프로젝트 (한양대 공동)</b><span>Kangsters</span>
+      </a>
+    </div>
+  </section>
+
   <section id="press">
-    <div class="sec-head"><span class="sec-num">04</span><h2>언론에 소개된 이야기</h2></div>
+    <div class="sec-head"><span class="sec-num">05</span><h2>언론에 소개된 이야기</h2></div>
     <ul class="press">
-      <li><a href="https://www.venturesquare.net/1031054/"><span class="t">“운동, 게임, 직업이 된다” 휠체어 위에서 시작된 피지컬 e스포츠</span><span class="m">벤처스퀘어 · 2026</span></a></li>
-      <li><a href="https://www.unicornfactory.co.kr/article/2024110110363464141"><span class="t">K스타트업 ‘휠체어 운동솔루션’, 美타임 올해의 발명품 선정</span><span class="m">유니콘팩토리 · 2024</span></a></li>
-      <li><a href="https://time.com/7094884/kangsters-wheely-x"><span class="t">Kangsters Wheely-X — The Best Inventions of 2024</span><span class="m">TIME · 2024</span></a></li>
-      <li><a href="https://futurechosun.com/archives/67848"><span class="t">“휠체어 사용자도 ‘홈트’ 하세요”</span><span class="m">더나은미래 · 2023</span></a></li>
-      <li><a href="https://journal.praxis.co/tyrion-kim-john-cho-kangsters-e6081f1b44fa"><span class="t">Tyrion Kim &amp; John Cho // Kangsters</span><span class="m">Praxis · 2024</span></a></li>
+      <li><a href="https://www.venturesquare.net/1031054/" target="_blank" rel="noopener"><span class="t">“운동, 게임, 직업이 된다” 휠체어 위에서 시작된 피지컬 e스포츠</span><span class="m">벤처스퀘어 · 2026</span></a></li>
+      <li><a href="https://www.unicornfactory.co.kr/article/2024110110363464141" target="_blank" rel="noopener"><span class="t">K스타트업 ‘휠체어 운동솔루션’, 美타임 올해의 발명품 선정</span><span class="m">유니콘팩토리 · 2024</span></a></li>
+      <li><a href="https://time.com/7094884/kangsters-wheely-x" target="_blank" rel="noopener"><span class="t">Kangsters Wheely-X — The Best Inventions of 2024</span><span class="m">TIME · 2024</span></a></li>
+      <li><a href="https://futurechosun.com/archives/67848" target="_blank" rel="noopener"><span class="t">“휠체어 사용자도 ‘홈트’ 하세요”</span><span class="m">더나은미래 · 2023</span></a></li>
+      <li><a href="https://journal.praxis.co/tyrion-kim-john-cho-kangsters-e6081f1b44fa" target="_blank" rel="noopener"><span class="t">Tyrion Kim &amp; John Cho // Kangsters</span><span class="m">Praxis · 2024</span></a></li>
     </ul>
   </section>
 
@@ -276,11 +368,12 @@
     <p class="motto"><span class="dot"></span>Make Barrier-Free above Barriers.</p>
     <p class="motto-ko">장벽을 넘어, 장벽 없는 세상을 만듭니다.</p>
     <div class="links">
-      <a href="https://www.linkedin.com/in/tyri0nkangkim/">LinkedIn</a>
-      <a href="https://github.com/tyrion0625">GitHub</a>
-      <a href="https://github.com/donggyunlim0525-netizen/kaist-team08-project">Team 8 Project</a>
+      <a href="https://www.linkedin.com/in/tyri0nkangkim/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.youtube.com/watch?v=kA1q7rYxBIs" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://github.com/tyrion0625" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/donggyunlim0525-netizen/kaist-team08-project" target="_blank" rel="noopener">Team 8 Project</a>
     </div>
-    <p class="fine">© 2026 Tyrion Kang Kim · KAIST BIZ.69911 Fall 2026</p>
+    <p class="fine">© 2026 Tyrion Kang Kim · KAIST BIZ.69911 Fall 2026 · Photos © Kangsters</p>
   </div>
 </footer>
 
